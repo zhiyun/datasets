@@ -35,6 +35,12 @@ from tensorflow_datasets.core.utils import shard_utils
 from tensorflow_datasets.core.utils import type_utils
 from tensorflow_datasets.core.utils.lazy_imports_utils import tensorflow as tf
 
+
+from tensorflow_datasets.core.features import feature as feature_lib
+
+TensorInfo = feature_lib.TensorInfo
+TreeDict = utils.TreeDict
+
 # TODO(tfds): Should be `TreeDict[FeatureValue]`
 Example = Any
 
@@ -365,6 +371,7 @@ class BeamWriter(object):
       hash_salt,
       disable_shuffling: bool,
       file_format: file_adapters.FileFormat = file_adapters.DEFAULT_FILE_FORMAT,
+      example_specs: Optional[TreeDict[TensorInfo]] = None,
   ):
     """Init BeamWriter.
 
@@ -393,6 +400,9 @@ class BeamWriter(object):
     self._split_info = None
     self._file_format = file_format
     self._disable_shuffling = disable_shuffling
+    if example_specs:
+        logging.error("example_specs: %s", example_specs)
+        self._serializer = example_serializer.Serializer(example_specs)
 
   def __getstate__(self):
     return self._original_state

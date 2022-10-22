@@ -43,13 +43,13 @@ audiobooks from the LibriVox project, and has been carefully segmented and align
 _URL = "http://www.openslr.org/12"
 _DL_URL = "http://www.openslr.org/resources/12/"
 _DL_URLS = {
-    "dev_clean": _DL_URL + "dev-clean.tar.gz",
-    "dev_other": _DL_URL + "dev-other.tar.gz",
+    # "dev_clean": _DL_URL + "dev-clean.tar.gz",
+    # "dev_other": _DL_URL + "dev-other.tar.gz",
     "test_clean": _DL_URL + "test-clean.tar.gz",
-    "test_other": _DL_URL + "test-other.tar.gz",
-    "train_clean100": _DL_URL + "train-clean-100.tar.gz",
-    "train_clean360": _DL_URL + "train-clean-360.tar.gz",
-    "train_other500": _DL_URL + "train-other-500.tar.gz",
+    # "test_other": _DL_URL + "test-other.tar.gz",
+    # "train_clean100": _DL_URL + "train-clean-100.tar.gz",
+    # "train_clean360": _DL_URL + "train-clean-360.tar.gz",
+    # "train_other500": _DL_URL + "train-other-500.tar.gz",
 }
 
 
@@ -104,6 +104,7 @@ class Librispeech(tfds.core.BeamBasedBuilder):
 
   def _split_generators(self, dl_manager):
     extracted_dirs = dl_manager.download_and_extract(_DL_URLS)
+    # '/Users/zhiyunlu/Documents/projects/tfds/data/'
     self._populate_metadata(extracted_dirs)
     splits = [
         tfds.core.SplitGenerator(name=k, gen_kwargs={"directory": v})
