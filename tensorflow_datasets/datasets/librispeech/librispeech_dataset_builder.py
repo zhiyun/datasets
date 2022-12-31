@@ -46,7 +46,7 @@ class LibrispeechConfig(tfds.core.BuilderConfig):
     self.lazy_decode = lazy_decode
 
 
-class Builder(tfds.core.GeneratorBasedBuilder):
+class Builder(tfds.core.BeamBasedBuilder):
   """Librispeech dataset."""
 
   VERSION = tfds.core.Version("2.1.2")
@@ -122,6 +122,14 @@ class Builder(tfds.core.GeneratorBasedBuilder):
         for split, directory in extracted_dirs.items()
     }
     return splits
+
+  def _build_pcollection(self, pipeline, directory):
+      """Generates examples as dicts."""
+      beam = tfds.core.lazy_imports.apache_beam
+      return (pipeline
+              | beam.Create([directory])
+              | beam.FlatMap(self._generate_examples)
+              | beam.Reshuffle())
 
   def _generate_examples(self, directory: epath.Path):
     """Generates examples as dicts."""
