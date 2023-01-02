@@ -117,10 +117,14 @@ class Builder(tfds.core.BeamBasedBuilder):
   def _split_generators(self, dl_manager: tfds.download.DownloadManager):
     extracted_dirs = dl_manager.download_and_extract(_DL_URLS)
     self._populate_metadata(extracted_dirs.values())
-    splits = {
-        split: self._generate_examples(directory)
+    # splits = {
+    #     split: self._generate_examples(directory)
+    #     for split, directory in extracted_dirs.items()
+    # }
+    splits = [
+        tfds.core.SplitGenerator(name=split, gen_kwargs={"directory": directory})
         for split, directory in extracted_dirs.items()
-    }
+    ]
     return splits
 
   def _build_pcollection(self, pipeline, directory):
