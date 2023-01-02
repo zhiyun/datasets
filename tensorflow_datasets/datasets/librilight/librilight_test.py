@@ -1,7 +1,7 @@
 """librilight dataset."""
 
 import tensorflow_datasets as tfds
-from . import librilight_dataset_builder
+from . import librilight
 
 
 class LibrilightTest(tfds.testing.DatasetBuilderTestCase):
