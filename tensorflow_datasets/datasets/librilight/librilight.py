@@ -4,7 +4,6 @@ Use with
 tfds build --manual_dir=/Users/zhiyunlu/Documents/projects/data/LibriLight
 """
 import os
-from etils import epath
 import tensorflow_datasets as tfds
 from tensorflow_datasets.core.utils.lazy_imports_utils import tensorflow as tf
 
@@ -51,7 +50,7 @@ class LibriLight(tfds.core.BeamBasedBuilder):
     def _split_generators(self, dl_manager: tfds.download.DownloadManager):
         extracted_dirs = dict()
         for subdir in tf.io.gfile.listdir(dl_manager.manual_dir):
-            extracted_dirs[subdir] = epath.Path(os.path.join(dl_manager.manual_dir, subdir))
+            extracted_dirs[subdir] = os.path.join(dl_manager.manual_dir, subdir)
         splits = [
             tfds.core.SplitGenerator(name=split, gen_kwargs={"directory": directory})
             for split, directory in extracted_dirs.items()
