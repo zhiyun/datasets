@@ -1,3 +1,3 @@
 """librilight dataset."""
 
-from .librilight import Librilight
+from .librilight_dataset_builder import Librilight
