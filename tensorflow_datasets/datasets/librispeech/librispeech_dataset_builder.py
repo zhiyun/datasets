@@ -128,32 +128,27 @@ class Builder(tfds.core.BeamBasedBuilder):
       beam = tfds.core.lazy_imports.apache_beam
       return (pipeline
               | beam.Create([directory])
-              | beam.FlatMap(self._generate_examples)
+              | beam.FlatMap(_generate_librispeech_examples)
               | beam.Reshuffle())
 
-  def _generate_examples(self, directory: epath.Path):
-    """Generates examples as dicts."""
-    transcripts_glob = os.path.join(directory, "LibriSpeech", "*/*/*/*.txt")
-    transcripts_files = tf.io.gfile.glob(transcripts_glob)
 
-    for transcript_file in transcripts_files:
-      yield from _generate_librispeech_examples(transcript_file)
-
-
-def _generate_librispeech_examples(transcript_file: str):
+def _generate_librispeech_examples(directory: epath.Path):
   """Generate examples from a Librispeech transcript file."""
-  audio_dir = os.path.dirname(transcript_file)
-  with tf.io.gfile.GFile(transcript_file) as f:
-    for line in f:
-      line = line.strip()
-      key, transcript = line.split(" ", 1)
-      audio_file = "%s.flac" % key
-      speaker_id, chapter_id = [int(el) for el in key.split("-")[:2]]
-      example = {
-          "id": key,
-          "speaker_id": speaker_id,
-          "chapter_id": chapter_id,
-          "speech": os.path.join(audio_dir, audio_file),
-          "text": transcript
-      }
-      yield key, example
+  transcripts_glob = os.path.join(directory, "LibriSpeech", "*/*/*/*.txt")
+
+  for transcript_file in tf.io.gfile.glob(transcripts_glob):
+      audio_dir = os.path.dirname(transcript_file)
+      with tf.io.gfile.GFile(transcript_file) as f:
+        for line in f:
+          line = line.strip()
+          key, transcript = line.split(" ", 1)
+          audio_file = "%s.flac" % key
+          speaker_id, chapter_id = [int(el) for el in key.split("-")[:2]]
+          example = {
+              "id": key,
+              "speaker_id": speaker_id,
+              "chapter_id": chapter_id,
+              "speech": os.path.join(audio_dir, audio_file),
+              "text": transcript
+          }
+          yield key, example
