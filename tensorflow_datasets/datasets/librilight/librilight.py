@@ -52,10 +52,10 @@ class LibriLight(tfds.core.BeamBasedBuilder):
         extracted_dirs = dict()
         for subdir in tf.io.gfile.listdir(dl_manager.manual_dir):
             extracted_dirs[subdir] = epath.Path(os.path.join(dl_manager.manual_dir, subdir))
-        splits = {
-            split: _generate_librispeech_examples(directory)
+        splits = [
+            tfds.core.SplitGenerator(name=split, gen_kwargs={"directory": directory})
             for split, directory in extracted_dirs.items()
-        }
+        ]
         return splits
 
 
