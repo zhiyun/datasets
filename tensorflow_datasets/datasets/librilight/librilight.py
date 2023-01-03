@@ -63,17 +63,18 @@ class LibriLight(tfds.core.BeamBasedBuilder):
         beam = tfds.core.lazy_imports.apache_beam
         return (pipeline
                 | beam.Create([directory])
-                | beam.FlatMap(_generate_librispeech_examples)
+                | beam.FlatMap(self._generate_librispeech_examples)
                 | beam.Reshuffle())
 
+    def _generate_librispeech_examples(self, directory):
+        """Generate examples from a Librispeech directory."""
+        audio_glob = os.path.join(directory, "*/*/*.flac")
+        for audio_file in tf.io.gfile.glob(audio_glob):
+            key = "-".join(os.path.dirname(audio_file).split("/")[-3:] + [os.path.basename(audio_file)[:-5]])
+            example = {
+                "id": key,
+                "speech": audio_file,
+            }
+            yield key, example
 
-def _generate_librispeech_examples(directory):
-    """Generate examples from a Librispeech directory."""
-    audio_glob = os.path.join(directory, "*/*/*.flac")
-    for audio_file in tf.io.gfile.glob(audio_glob):
-        key = "-".join(os.path.dirname(audio_file).split("/")[-3:] + [os.path.basename(audio_file)[:-5]])
-        example = {
-            "id": key,
-            "speech": audio_file,
-        }
-        yield key, example
+
