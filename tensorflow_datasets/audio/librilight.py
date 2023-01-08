@@ -26,9 +26,9 @@ _DL_URLS = "/Users/zhiyunlu/Documents/projects/data/LibriLight"
 class LibriLight(tfds.core.BeamBasedBuilder):
     """DatasetBuilder for librilight dataset."""
 
-    VERSION = tfds.core.Version('1.0.0')
+    VERSION = tfds.core.Version('1.0.1')
     RELEASE_NOTES = {
-        '1.0.0': 'Initial release.',
+        '1.0.1': 'Debug version.',
     }
     MANUAL_DOWNLOAD_INSTRUCTIONS = """
     manual_dir should contain three folders large medium and small. The instructions for
