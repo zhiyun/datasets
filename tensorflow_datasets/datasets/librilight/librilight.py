@@ -18,17 +18,15 @@ _CITATION = """\
 """
 _URL = "https://github.com/facebookresearch/libri-light"
 _DL_URLS = "/Users/zhiyunlu/Documents/projects/data/LibriLight"
-
-
 #  "/Users/zhiyunlu/Documents/projects/tfds/data/"
 
 
 class LibriLight(tfds.core.BeamBasedBuilder):
     """DatasetBuilder for librilight dataset."""
-
-    VERSION = tfds.core.Version('1.0.1')
+    
+    VERSION = tfds.core.Version('1.0.0')
     RELEASE_NOTES = {
-        '1.0.1': 'Debug version.',
+      '1.0.0': 'Initial release.',
     }
     MANUAL_DOWNLOAD_INSTRUCTIONS = """
     manual_dir should contain three folders large medium and small. The instructions for
@@ -37,16 +35,16 @@ class LibriLight(tfds.core.BeamBasedBuilder):
 
     def _info(self) -> tfds.core.DatasetInfo:
         return tfds.core.DatasetInfo(
-            builder=self,
-            description="LibriLight dataset.",
-            features=tfds.features.FeaturesDict({
-                "speech": tfds.features.Audio(sample_rate=16000, dtype=tf.int16),
-                "id": tf.string,
-            }),
-            supervised_keys=None,
-            homepage=_URL,
-            citation=_CITATION,
-            metadata=tfds.core.MetadataDict(sample_rate=16000, ),
+          builder=self,
+          description="LibriLight dataset.",
+          features=tfds.features.FeaturesDict({
+              "speech": tfds.features.Audio(sample_rate=16000, dtype=tf.int16),
+              "id": tf.string,
+          }),
+          supervised_keys=None,
+          homepage=_URL,
+          citation=_CITATION,
+          metadata=tfds.core.MetadataDict(sample_rate=16000, ),
         )
 
     def _split_generators(self, dl_manager: tfds.download.DownloadManager):
@@ -58,6 +56,7 @@ class LibriLight(tfds.core.BeamBasedBuilder):
             for split, directory in extracted_dirs.items()
         ]
         return splits
+
 
     def _build_pcollection(self, pipeline, directory):
         """Generates examples as dicts."""
@@ -77,3 +76,5 @@ class LibriLight(tfds.core.BeamBasedBuilder):
                 "speech": audio_file,
             }
             yield key, example
+
+
