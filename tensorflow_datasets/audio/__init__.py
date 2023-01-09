@@ -24,6 +24,7 @@ from tensorflow_datasets.audio.fuss import Fuss
 from tensorflow_datasets.audio.groove import Groove
 from tensorflow_datasets.audio.gtzan import GTZAN
 from tensorflow_datasets.audio.gtzan_music_speech import GTZANMusicSpeech
+from tensorflow_datasets.audio.librilight import Librilight
 from tensorflow_datasets.audio.librispeech import Librispeech
 from tensorflow_datasets.audio.libritts import Libritts
 from tensorflow_datasets.audio.ljspeech import Ljspeech

@@ -21,7 +21,7 @@ _DL_URLS = "/Users/zhiyunlu/Documents/projects/data/LibriLight"
 #  "/Users/zhiyunlu/Documents/projects/tfds/data/"
 
 
-class LibriLight(tfds.core.BeamBasedBuilder):
+class Builder(tfds.core.BeamBasedBuilder):
     """DatasetBuilder for librilight dataset."""
     
     VERSION = tfds.core.Version('1.0.1')
