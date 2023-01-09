@@ -4,8 +4,11 @@ Use with
 tfds build --manual_dir=/Users/zhiyunlu/Documents/projects/data/LibriLight
 """
 import os
-import tensorflow_datasets as tfds
 from tensorflow_datasets.core.utils.lazy_imports_utils import tensorflow as tf
+import tensorflow_datasets.public_api as tfds
+
+# import tensorflow_datasets as tfds
+# from tensorflow_datasets.core.utils.lazy_imports_utils import tensorflow as tf
 
 _CITATION = """\
 @inproceedings{librilight,
