@@ -66,9 +66,7 @@ from tensorflow_datasets.text.quality import Quality
 from tensorflow_datasets.text.race import Race
 from tensorflow_datasets.text.reddit_disentanglement import RedditDisentanglement
 from tensorflow_datasets.text.salient_span_wikipedia import SalientSpanWikipedia
-from tensorflow_datasets.text.salient_span_wikipedia import SalientSpanWikipediaConfig
 from tensorflow_datasets.text.scan import Scan
-from tensorflow_datasets.text.scan import ScanConfig
 from tensorflow_datasets.text.schema_guided_dialogue import SchemaGuidedDialogue
 from tensorflow_datasets.text.scicite import Scicite
 from tensorflow_datasets.text.scitail import SciTail

@@ -12,11 +12,6 @@
 # `reddit_tifu`
 
 
-Note: This dataset has been updated since the last stable release. The new
-versions and config marked with
-<span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
-are only available in the `tfds-nightly` package.
-
 *   **Description**:
 
 Reddit dataset, where TIFU denotes the name of subbreddit /r/tifu. As defined in
@@ -47,13 +42,12 @@ Features includes:
 *   **Versions**:
 
     *   `1.1.0`: Remove empty document and summary strings.
-    *   **`1.1.1`** (default)
-        <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>:
-        Add train, dev and test (80/10/10) splits which are used in PEGASUS
-        (https://arxiv.org/abs/1912.08777) in a separate config. These were
-        created randomly using the tfds split function and are being released to
-        ensure that results on Reddit Tifu Long are reproducible and
+    *   `1.1.1`: Add train, dev and test (80/10/10) splits which are used in
+        PEGASUS (https://arxiv.org/abs/1912.08777) in a separate config. These
+        were created randomly using the tfds split function and are being
+        released to ensure that results on Reddit Tifu Long are reproducible and
         comparable.Also add `id` to the datapoints.
+    *   **`1.1.2`** (default): Corrected splits uploaded.
 
 *   **Feature structure**:
 
@@ -134,7 +128,7 @@ Split     | Examples
 <button id="displaydataframe">Display examples...</button>
 <div id="dataframecontent" style="overflow-x:auto"></div>
 <script>
-const url = "https://storage.googleapis.com/tfds-data/visualization/dataframe/reddit_tifu-short-1.1.1.html";
+const url = "https://storage.googleapis.com/tfds-data/visualization/dataframe/reddit_tifu-short-1.1.2.html";
 const dataButton = document.getElementById('displaydataframe');
 dataButton.addEventListener('click', async () => {
   // Disable the button after clicking (dataframe loaded only once).
@@ -193,7 +187,7 @@ Split     | Examples
 <button id="displaydataframe">Display examples...</button>
 <div id="dataframecontent" style="overflow-x:auto"></div>
 <script>
-const url = "https://storage.googleapis.com/tfds-data/visualization/dataframe/reddit_tifu-long-1.1.1.html";
+const url = "https://storage.googleapis.com/tfds-data/visualization/dataframe/reddit_tifu-long-1.1.2.html";
 const dataButton = document.getElementById('displaydataframe');
 dataButton.addEventListener('click', async () => {
   // Disable the button after clicking (dataframe loaded only once).
@@ -220,7 +214,7 @@ dataButton.addEventListener('click', async () => {
 
 <!-- mdformat on -->
 
-## reddit_tifu/long_split <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
+## reddit_tifu/long_split
 
 *   **Config description**: Using TLDR as summary and return train/test/dev
     splits.
@@ -237,9 +231,9 @@ dataButton.addEventListener('click', async () => {
 
 Split          | Examples
 :------------- | -------:
-`'test'`       | 421
-`'train'`      | 41,296
-`'validation'` | 422
+`'test'`       | 4,214
+`'train'`      | 33,711
+`'validation'` | 4,214
 
 *   **Supervised keys** (See
     [`as_supervised` doc](https://www.tensorflow.org/datasets/api_docs/python/tfds/load#args)):
@@ -255,7 +249,7 @@ Split          | Examples
 <button id="displaydataframe">Display examples...</button>
 <div id="dataframecontent" style="overflow-x:auto"></div>
 <script>
-const url = "https://storage.googleapis.com/tfds-data/visualization/dataframe/reddit_tifu-long_split-1.1.1.html";
+const url = "https://storage.googleapis.com/tfds-data/visualization/dataframe/reddit_tifu-long_split-1.1.2.html";
 const dataButton = document.getElementById('displaydataframe');
 dataButton.addEventListener('click', async () => {
   // Disable the button after clicking (dataframe loaded only once).

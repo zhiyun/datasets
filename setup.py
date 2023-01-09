@@ -63,7 +63,7 @@ REQUIRED_PKGS = [
     'click',
     'dill',  # TODO(tfds): move to TESTS_REQUIRE.
     'dm-tree',
-    'etils[epath]',
+    'etils[enp,epath]>=0.9.0',
     'numpy',
     'promise',
     'protobuf>=3.12.2',
@@ -96,6 +96,7 @@ TESTS_REQUIRE = [
     # Required by scripts/documentation/
     'pyyaml',
     'tensorflow-io',
+    'datasets',
 ]
 
 # Additional deps for formatting
@@ -233,6 +234,7 @@ setup(
                 'community-datasets.toml',
                 'dataset_collections/*/*.md',
                 'dataset_collections/*/*.bib',
+                'core/valid_tags.txt',
             ],
     },
     exclude_package_data={

@@ -10,6 +10,8 @@ toc:
 - section:
   - path: /datasets/catalog/aflw2k3d
     title: aflw2k3d
+  - path: /datasets/catalog/smallnorb
+    title: smallnorb
   title: 3d
 - section:
   - path: /datasets/catalog/aeslc
@@ -24,6 +26,10 @@ toc:
     title: reddit
   - path: /datasets/catalog/reddit_tifu
     title: reddit_tifu
+  - path: /datasets/catalog/samsum
+    title: samsum (manual)
+  - path: /datasets/catalog/scientific_papers
+    title: scientific_papers
   title: Abstractive text summarization
 - section:
   - path: /datasets/catalog/ag_news_subset
@@ -86,6 +92,10 @@ toc:
     title: ogbg_molpcba
   title: Biology
 - section:
+  - path: /datasets/catalog/sift1m
+    title: sift1m
+  title: Categorical
+- section:
   - path: /datasets/catalog/ai2_arc_with_ir
     title: ai2_arc_with_ir
   - path: /datasets/catalog/arc
@@ -144,6 +154,8 @@ toc:
     title: booksum (manual)
   - path: /datasets/catalog/newsroom
     title: newsroom (manual)
+  - path: /datasets/catalog/scientific_papers
+    title: scientific_papers
   title: Document summarization
 - section:
   - path: /datasets/catalog/caltech101
@@ -274,12 +286,18 @@ toc:
     title: ref_coco (manual)
   - path: /datasets/catalog/resisc45
     title: resisc45 (manual)
+  - path: /datasets/catalog/rock_paper_scissors
+    title: rock_paper_scissors
   - path: /datasets/catalog/s3o4d
     title: s3o4d
   - path: /datasets/catalog/scene_parse150
     title: scene_parse150
   - path: /datasets/catalog/shapes3d
     title: shapes3d
+  - path: /datasets/catalog/siscore
+    title: siscore
+  - path: /datasets/catalog/smallnorb
+    title: smallnorb
   - path: /datasets/catalog/symmetric_solids
     title: symmetric_solids
   - path: /datasets/catalog/the300w_lp
@@ -324,6 +342,10 @@ toc:
     title: plant_village
   - path: /datasets/catalog/resisc45
     title: resisc45 (manual)
+  - path: /datasets/catalog/siscore
+    title: siscore
+  - path: /datasets/catalog/smallnorb
+    title: smallnorb
   title: Image classification
 - section:
   - path: /datasets/catalog/imagenet2012
@@ -448,12 +470,6 @@ toc:
     title: mnist_corrupted
   - path: /datasets/catalog/omniglot
     title: omniglot
-  - path: /datasets/catalog/rock_paper_scissors
-    title: rock_paper_scissors
-  - path: /datasets/catalog/siscore
-    title: siscore
-  - path: /datasets/catalog/smallnorb
-    title: smallnorb
   - path: /datasets/catalog/so2sat
     title: so2sat
   - path: /datasets/catalog/stanford_dogs
@@ -510,6 +526,8 @@ toc:
     title: pg19
   - path: /datasets/catalog/reddit
     title: reddit
+  - path: /datasets/catalog/samsum
+    title: samsum (manual)
   title: Language modelling
 - section:
   - path: /datasets/catalog/mlqa
@@ -564,6 +582,18 @@ toc:
     title: race
   - path: /datasets/catalog/reddit
     title: reddit
+  - path: /datasets/catalog/savee
+    title: savee (manual)
+  - path: /datasets/catalog/schema_guided_dialogue
+    title: schema_guided_dialogue
+  - path: /datasets/catalog/sci_tail
+    title: sci_tail
+  - path: /datasets/catalog/scicite
+    title: scicite
+  - path: /datasets/catalog/scientific_papers
+    title: scientific_papers
+  - path: /datasets/catalog/sentiment140
+    title: sentiment140
   title: Monolingual
 - section:
   - path: /datasets/catalog/opinion_abstracts
@@ -582,6 +612,8 @@ toc:
     title: anli
   - path: /datasets/catalog/paws_wiki
     title: paws_wiki
+  - path: /datasets/catalog/sci_tail
+    title: sci_tail
   title: Natural language inference
 - section:
   - path: /datasets/catalog/ag_news_subset
@@ -603,7 +635,6 @@ toc:
   - path: /datasets/catalog/mlqa
     title: mlqa
   - path: /datasets/catalog/natural_instructions
-    status: nightly
     title: natural_instructions
   - path: /datasets/catalog/natural_questions
     title: natural_questions
@@ -627,14 +658,18 @@ toc:
     title: quac
   - path: /datasets/catalog/race
     title: race
+  - path: /datasets/catalog/schema_guided_dialogue
+    title: schema_guided_dialogue
+  - path: /datasets/catalog/sci_tail
+    title: sci_tail
+  - path: /datasets/catalog/sentiment140
+    title: sentiment140
   title: Natural language understanding
 - section:
   - path: /datasets/catalog/deep1b
     title: deep1b
   - path: /datasets/catalog/glove100_angular
     title: glove100_angular
-  - path: /datasets/catalog/sift1m
-    title: sift1m
   title: Nearest neighbors
 - section:
   - path: /datasets/catalog/flic
@@ -676,7 +711,6 @@ toc:
   - path: /datasets/catalog/mlqa
     title: mlqa
   - path: /datasets/catalog/natural_instructions
-    status: nightly
     title: natural_instructions
   - path: /datasets/catalog/natural_questions
     title: natural_questions
@@ -738,8 +772,6 @@ toc:
     title: criteo
   - path: /datasets/catalog/hillstrom
     title: hillstrom
-  - path: /datasets/catalog/simpte
-    title: simpte (manual)
   title: Recommendation
 - section:
   - path: /datasets/catalog/robomimic_ph
@@ -814,6 +846,8 @@ toc:
 - section:
   - path: /datasets/catalog/imdb_reviews
     title: imdb_reviews
+  - path: /datasets/catalog/sentiment140
+    title: sentiment140
   title: Sentiment analysis
 - section:
   - path: /datasets/catalog/big_patent
@@ -828,6 +862,8 @@ toc:
     title: paws_wiki
   - path: /datasets/catalog/reddit
     title: reddit
+  - path: /datasets/catalog/samsum
+    title: samsum (manual)
   title: Sequence to sequence language modelling
 - section:
   - path: /datasets/catalog/librispeech
@@ -868,8 +904,6 @@ toc:
     title: movie_lens
   - path: /datasets/catalog/movielens
     title: movielens
-  - path: /datasets/catalog/rock_you
-    title: rock_you
   - path: /datasets/catalog/titanic
     title: titanic
   - path: /datasets/catalog/web_graph
@@ -896,10 +930,6 @@ toc:
     title: gov_report
   - path: /datasets/catalog/multi_news
     title: multi_news
-  - path: /datasets/catalog/samsum
-    title: samsum (manual)
-  - path: /datasets/catalog/scientific_papers
-    title: scientific_papers
   - path: /datasets/catalog/summscreen
     title: summscreen
   - path: /datasets/catalog/wikihow
@@ -922,6 +952,8 @@ toc:
     title: opinion_abstracts
   - path: /datasets/catalog/radon
     title: radon
+  - path: /datasets/catalog/simpte
+    title: simpte (manual)
   title: Tabular
 - section:
   - path: /datasets/catalog/abstract_reasoning
@@ -967,7 +999,6 @@ toc:
   - path: /datasets/catalog/c4
     title: c4 (manual)
   - path: /datasets/catalog/c4_wsrs
-    status: nightly
     title: c4_wsrs
   - path: /datasets/catalog/caltech101
     title: caltech101
@@ -982,7 +1013,6 @@ toc:
   - path: /datasets/catalog/clinc_oos
     title: clinc_oos
   - path: /datasets/catalog/conll2002
-    status: nightly
     title: conll2002
   - path: /datasets/catalog/conll2003
     title: conll2003
@@ -1061,7 +1091,6 @@ toc:
   - path: /datasets/catalog/multi_nli_mismatch
     title: multi_nli_mismatch
   - path: /datasets/catalog/natural_instructions
-    status: nightly
     title: natural_instructions
   - path: /datasets/catalog/natural_questions
     title: natural_questions
@@ -1114,7 +1143,6 @@ toc:
   - path: /datasets/catalog/protein_net
     title: protein_net
   - path: /datasets/catalog/q_re_cc
-    status: nightly
     title: q_re_cc
   - path: /datasets/catalog/qa4mre
     title: qa4mre
@@ -1134,8 +1162,14 @@ toc:
     title: ref_coco (manual)
   - path: /datasets/catalog/resisc45
     title: resisc45 (manual)
+  - path: /datasets/catalog/robonet
+    title: robonet
+  - path: /datasets/catalog/rock_you
+    title: rock_you
   - path: /datasets/catalog/salient_span_wikipedia
     title: salient_span_wikipedia
+  - path: /datasets/catalog/samsum
+    title: samsum (manual)
   - path: /datasets/catalog/scan
     title: scan
   - path: /datasets/catalog/schema_guided_dialogue
@@ -1144,10 +1178,14 @@ toc:
     title: sci_tail
   - path: /datasets/catalog/scicite
     title: scicite
+  - path: /datasets/catalog/scientific_papers
+    title: scientific_papers
   - path: /datasets/catalog/scrolls
     title: scrolls
   - path: /datasets/catalog/sentiment140
     title: sentiment140
+  - path: /datasets/catalog/smallnorb
+    title: smallnorb
   - path: /datasets/catalog/snli
     title: snli
   - path: /datasets/catalog/squad_question_generation
@@ -1201,12 +1239,13 @@ toc:
   - path: /datasets/catalog/imdb_reviews
     title: imdb_reviews
   - path: /datasets/catalog/natural_instructions
-    status: nightly
     title: natural_instructions
   - path: /datasets/catalog/paws_wiki
     title: paws_wiki
   - path: /datasets/catalog/paws_x_wiki
     title: paws_x_wiki
+  - path: /datasets/catalog/sentiment140
+    title: sentiment140
   title: Text classification
 - section:
   - path: /datasets/catalog/aeslc
@@ -1230,7 +1269,6 @@ toc:
   - path: /datasets/catalog/mctaco
     title: mctaco
   - path: /datasets/catalog/natural_instructions
-    status: nightly
     title: natural_instructions
   - path: /datasets/catalog/natural_questions
     title: natural_questions
@@ -1246,6 +1284,12 @@ toc:
     title: reddit
   - path: /datasets/catalog/reddit_tifu
     title: reddit_tifu
+  - path: /datasets/catalog/samsum
+    title: samsum (manual)
+  - path: /datasets/catalog/schema_guided_dialogue
+    title: schema_guided_dialogue
+  - path: /datasets/catalog/scientific_papers
+    title: scientific_papers
   title: Text generation
 - section:
   - path: /datasets/catalog/aeslc
@@ -1262,6 +1306,10 @@ toc:
     title: reddit
   - path: /datasets/catalog/reddit_tifu
     title: reddit_tifu
+  - path: /datasets/catalog/samsum
+    title: samsum (manual)
+  - path: /datasets/catalog/scientific_papers
+    title: scientific_papers
   title: Text summarization
 - section:
   - path: /datasets/catalog/wiki_auto
@@ -1345,7 +1393,6 @@ toc:
   - path: /datasets/catalog/grounded_scan
     title: grounded_scan
   - path: /datasets/catalog/laion400m
-    status: nightly
     title: laion400m (manual)
   - path: /datasets/catalog/wit
     title: wit

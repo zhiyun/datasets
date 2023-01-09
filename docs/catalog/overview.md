@@ -32,6 +32,7 @@ for ex in tfds.load('cifar10', split='train'):
 ### `3d`
 
 *   [`aflw2k3d`](aflw2k3d.md)
+*   [`smallnorb`](smallnorb.md)
 
 ### `Abstractive text summarization`
 
@@ -41,6 +42,8 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`newsroom`](newsroom.md)
 *   [`reddit`](reddit.md)
 *   [`reddit_tifu`](reddit_tifu.md)
+*   [`samsum`](samsum.md)
+*   [`scientific_papers`](scientific_papers.md)
 
 ### `Anomaly detection`
 
@@ -77,6 +80,10 @@ for ex in tfds.load('cifar10', split='train'):
 ### `Biology`
 
 *   [`ogbg_molpcba`](ogbg_molpcba.md)
+
+### `Categorical`
+
+*   [`sift1m`](sift1m.md)
 
 ### `Common sense reasoning`
 
@@ -121,6 +128,7 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`aeslc`](aeslc.md)
 *   [`booksum`](booksum.md)
 *   [`newsroom`](newsroom.md)
+*   [`scientific_papers`](scientific_papers.md)
 
 ### `Fine grained image classification`
 
@@ -194,9 +202,12 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`quickdraw_bitmap`](quickdraw_bitmap.md)
 *   [`ref_coco`](ref_coco.md)
 *   [`resisc45`](resisc45.md)
+*   [`rock_paper_scissors`](rock_paper_scissors.md)
 *   [`s3o4d`](s3o4d.md)
 *   [`scene_parse150`](scene_parse150.md)
 *   [`shapes3d`](shapes3d.md)
+*   [`siscore`](siscore.md)
+*   [`smallnorb`](smallnorb.md)
 *   [`symmetric_solids`](symmetric_solids.md)
 *   [`the300w_lp`](the300w_lp.md)
 
@@ -221,6 +232,8 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`places365_small`](places365_small.md)
 *   [`plant_village`](plant_village.md)
 *   [`resisc45`](resisc45.md)
+*   [`siscore`](siscore.md)
+*   [`smallnorb`](smallnorb.md)
 
 ### `Image clustering`
 
@@ -295,9 +308,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`mnist`](mnist.md)
 *   [`mnist_corrupted`](mnist_corrupted.md)
 *   [`omniglot`](omniglot.md)
-*   [`rock_paper_scissors`](rock_paper_scissors.md)
-*   [`siscore`](siscore.md)
-*   [`smallnorb`](smallnorb.md)
 *   [`so2sat`](so2sat.md)
 *   [`stanford_dogs`](stanford_dogs.md)
 *   [`stanford_online_products`](stanford_online_products.md)
@@ -330,6 +340,7 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`paws_x_wiki`](paws_x_wiki.md)
 *   [`pg19`](pg19.md)
 *   [`reddit`](reddit.md)
+*   [`samsum`](samsum.md)
 
 ### `Machine translation`
 
@@ -361,6 +372,12 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`quac`](quac.md)
 *   [`race`](race.md)
 *   [`reddit`](reddit.md)
+*   [`savee`](savee.md)
+*   [`schema_guided_dialogue`](schema_guided_dialogue.md)
+*   [`sci_tail`](sci_tail.md)
+*   [`scicite`](scicite.md)
+*   [`scientific_papers`](scientific_papers.md)
+*   [`sentiment140`](sentiment140.md)
 
 ### `Movies and tv shows`
 
@@ -376,6 +393,7 @@ for ex in tfds.load('cifar10', split='train'):
 
 *   [`anli`](anli.md)
 *   [`paws_wiki`](paws_wiki.md)
+*   [`sci_tail`](sci_tail.md)
 
 ### `Natural language understanding`
 
@@ -389,7 +407,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`math_qa`](math_qa.md)
 *   [`mlqa`](mlqa.md)
 *   [`natural_instructions`](natural_instructions.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`natural_questions`](natural_questions.md)
 *   [`natural_questions_open`](natural_questions_open.md)
 *   [`openbookqa`](openbookqa.md)
@@ -401,12 +418,14 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`qasc`](qasc.md)
 *   [`quac`](quac.md)
 *   [`race`](race.md)
+*   [`schema_guided_dialogue`](schema_guided_dialogue.md)
+*   [`sci_tail`](sci_tail.md)
+*   [`sentiment140`](sentiment140.md)
 
 ### `Nearest neighbors`
 
 *   [`deep1b`](deep1b.md)
 *   [`glove100_angular`](glove100_angular.md)
-*   [`sift1m`](sift1m.md)
 
 ### `Object detection`
 
@@ -436,7 +455,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`math_qa`](math_qa.md)
 *   [`mlqa`](mlqa.md)
 *   [`natural_instructions`](natural_instructions.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`natural_questions`](natural_questions.md)
 *   [`natural_questions_open`](natural_questions_open.md)
 *   [`openbookqa`](openbookqa.md)
@@ -477,7 +495,6 @@ for ex in tfds.load('cifar10', split='train'):
 
 *   [`criteo`](criteo.md)
 *   [`hillstrom`](hillstrom.md)
-*   [`simpte`](simpte.md)
 
 ### `Reinforcement learning`
 
@@ -531,6 +548,7 @@ for ex in tfds.load('cifar10', split='train'):
 ### `Sentiment analysis`
 
 *   [`imdb_reviews`](imdb_reviews.md)
+*   [`sentiment140`](sentiment140.md)
 
 ### `Sequence to sequence language modelling`
 
@@ -540,6 +558,7 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`opus`](opus.md)
 *   [`paws_wiki`](paws_wiki.md)
 *   [`reddit`](reddit.md)
+*   [`samsum`](samsum.md)
 
 ### `Speech`
 
@@ -566,7 +585,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`iris`](iris.md)
 *   [`movie_lens`](movie_lens.md)
 *   [`movielens`](movielens.md)
-*   [`rock_you`](rock_you.md)
 *   [`titanic`](titanic.md)
 *   [`web_graph`](web_graph.md)
 *   [`web_nlg`](web_nlg.md)
@@ -582,8 +600,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`gigaword`](gigaword.md)
 *   [`gov_report`](gov_report.md)
 *   [`multi_news`](multi_news.md)
-*   [`samsum`](samsum.md)
-*   [`scientific_papers`](scientific_papers.md)
 *   [`summscreen`](summscreen.md)
 *   [`wikihow`](wikihow.md)
 *   [`xsum`](xsum.md)
@@ -599,6 +615,7 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`kddcup99`](kddcup99.md)
 *   [`opinion_abstracts`](opinion_abstracts.md)
 *   [`radon`](radon.md)
+*   [`simpte`](simpte.md)
 
 ### `Text`
 
@@ -624,7 +641,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`bucc`](bucc.md)
 *   [`c4`](c4.md)
 *   [`c4_wsrs`](c4_wsrs.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`caltech101`](caltech101.md)
 *   [`cfq`](cfq.md)
 *   [`cityscapes`](cityscapes.md)
@@ -632,7 +648,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`clevr`](clevr.md)
 *   [`clinc_oos`](clinc_oos.md)
 *   [`conll2002`](conll2002.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`conll2003`](conll2003.md)
 *   [`cos_e`](cos_e.md)
 *   [`definite_pronoun_resolution`](definite_pronoun_resolution.md)
@@ -672,7 +687,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`multi_nli`](multi_nli.md)
 *   [`multi_nli_mismatch`](multi_nli_mismatch.md)
 *   [`natural_instructions`](natural_instructions.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`natural_questions`](natural_questions.md)
 *   [`natural_questions_open`](natural_questions_open.md)
 *   [`newsroom`](newsroom.md)
@@ -699,7 +713,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`plantae_k`](plantae_k.md)
 *   [`protein_net`](protein_net.md)
 *   [`q_re_cc`](q_re_cc.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`qa4mre`](qa4mre.md)
 *   [`qasc`](qasc.md)
 *   [`quac`](quac.md)
@@ -709,13 +722,18 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`reddit_tifu`](reddit_tifu.md)
 *   [`ref_coco`](ref_coco.md)
 *   [`resisc45`](resisc45.md)
+*   [`robonet`](robonet.md)
+*   [`rock_you`](rock_you.md)
 *   [`salient_span_wikipedia`](salient_span_wikipedia.md)
+*   [`samsum`](samsum.md)
 *   [`scan`](scan.md)
 *   [`schema_guided_dialogue`](schema_guided_dialogue.md)
 *   [`sci_tail`](sci_tail.md)
 *   [`scicite`](scicite.md)
+*   [`scientific_papers`](scientific_papers.md)
 *   [`scrolls`](scrolls.md)
 *   [`sentiment140`](sentiment140.md)
+*   [`smallnorb`](smallnorb.md)
 *   [`snli`](snli.md)
 *   [`squad_question_generation`](squad_question_generation.md)
 *   [`star_cfq`](star_cfq.md)
@@ -745,9 +763,9 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`bool_q`](bool_q.md)
 *   [`imdb_reviews`](imdb_reviews.md)
 *   [`natural_instructions`](natural_instructions.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`paws_wiki`](paws_wiki.md)
 *   [`paws_x_wiki`](paws_x_wiki.md)
+*   [`sentiment140`](sentiment140.md)
 
 ### `Text generation`
 
@@ -762,7 +780,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`math_qa`](math_qa.md)
 *   [`mctaco`](mctaco.md)
 *   [`natural_instructions`](natural_instructions.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`natural_questions`](natural_questions.md)
 *   [`newsroom`](newsroom.md)
 *   [`openbookqa`](openbookqa.md)
@@ -770,6 +787,9 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`race`](race.md)
 *   [`reddit`](reddit.md)
 *   [`reddit_tifu`](reddit_tifu.md)
+*   [`samsum`](samsum.md)
+*   [`schema_guided_dialogue`](schema_guided_dialogue.md)
+*   [`scientific_papers`](scientific_papers.md)
 
 ### `Text summarization`
 
@@ -780,6 +800,8 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`newsroom`](newsroom.md)
 *   [`reddit`](reddit.md)
 *   [`reddit_tifu`](reddit_tifu.md)
+*   [`samsum`](samsum.md)
+*   [`scientific_papers`](scientific_papers.md)
 
 ### `Text simplification`
 
@@ -840,7 +862,6 @@ for ex in tfds.load('cifar10', split='train'):
 *   [`gref`](gref.md)
 *   [`grounded_scan`](grounded_scan.md)
 *   [`laion400m`](laion400m.md)
-    <span class="material-icons" title="Available only in the tfds-nightly package">nights_stay</span>
 *   [`wit`](wit.md)
 *   [`wit_kaggle`](wit_kaggle.md)
 
