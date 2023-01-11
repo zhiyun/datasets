@@ -22,7 +22,7 @@ _DL_URLS = "/Users/zhiyunlu/Documents/projects/data/LibriLight"
 class Librilight(tfds.core.GeneratorBasedBuilder):
     """DatasetBuilder for librilight dataset."""
 
-    VERSION = tfds.core.Version("5.0.1")
+    VERSION = tfds.core.Version("6.0.1")
     RELEASE_NOTES = {
         "5.0.1": "Initial release.",
     }
@@ -71,10 +71,8 @@ class Librilight(tfds.core.GeneratorBasedBuilder):
             audio_file,
         ) -> Iterator[Tuple[str, Dict[str, str]]]:
             """Generate examples from a Librispeech directory."""
-            key = "-".join(
-                os.path.dirname(audio_file).split("/")[-3:]
-                + [os.path.basename(audio_file)[:-5]]
-            )
+            dir_list = audio_file.split("/")
+            key = "-".join(dir_list[-4:-1] + [dir_list[-1][:-5]])
             example = {
                 "id": key,
                 "speech": audio_file,
